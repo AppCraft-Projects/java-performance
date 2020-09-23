@@ -3,10 +3,13 @@ package com.perf._02_algorithms;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.perf.Utils.measureRuntimeOf;
+
 public class _01_Fibonacci {
 
     public static void main(String[] args) {
-        System.out.printf("%d", fibDyn(100));
+        System.out.printf("%s%n", measureRuntimeOf(() -> fib(40)));
+        System.out.printf("%s%n", measureRuntimeOf(() -> fibDyn(40)));
     }
 
     static int fib(int n) {

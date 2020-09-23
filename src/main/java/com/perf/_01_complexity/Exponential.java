@@ -1,10 +1,9 @@
 package com.perf._01_complexity;
 
 public class Exponential {
+
     public static void main(String[] args) {
-
-        fib(Integer.parseInt(args[0]));
-
+        fib(10);
     }
 
     public static int fib(int n) {
