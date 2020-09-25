@@ -22,6 +22,14 @@ public class Utils {
         return random.longs(count);
     }
 
+    public static void printRuntimeOf(Runnable fn) {
+        System.out.println(measureRuntimeOf(fn));
+    }
+
+    public static void printRuntimeOf(TimeUnit timeUnit, Runnable fn) {
+        System.out.println(measureRuntimeOf(timeUnit, fn));
+    }
+
     public static RunTime measureRuntimeOf(TimeUnit timeUnit, Runnable fn) {
         long start = System.nanoTime();
         fn.run();
@@ -55,6 +63,7 @@ public class Utils {
                     break;
                 case MICROSECONDS:
                     tu = "us";
+                    break;
                 case MILLISECONDS:
                     tu = "ms";
                     break;
