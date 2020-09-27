@@ -10,7 +10,7 @@ import static com.perf.Utils.generateRandomNumbers;
 import static com.perf.Utils.measureRuntimeOf;
 
 @SuppressWarnings({"MismatchedQueryAndUpdateOfCollection", "ResultOfMethodCallIgnored"})
-public class TreeMapAndTreeSet {
+public class TreeSetVsListAndSort {
 
     public static void main(String[] args) {
         List<Long> nums = generateRandomNumbers(5_000_000).boxed().collect(Collectors.toList());
